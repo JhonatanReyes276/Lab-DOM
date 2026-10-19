@@ -17,6 +17,9 @@
     --por-fila: 6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     background: var(--fondo);
@@ -245,6 +248,8 @@ h1, h2, h3 {
     background: linear-gradient(160deg, var(--primario) 0%, var(--primario-oscuro) 100%);
     color: #fff;
     transform: rotateY(180deg);
+    padding: 1rem;
+    gap: .5rem;
 }
 
 .card-dorso span {
@@ -256,6 +261,17 @@ h1, h2, h3 {
 .card-dorso small {
     font-size: .75rem;
     opacity: .8;
+}
+
+.card-dorso img {
+    width: 100%;
+    height: auto;
+    max-height: 55%;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 0 auto .25rem;
+    display: block;
+    background: rgba(255, 255, 255, .12);
 }
 
 .card:hover .card-frente,
