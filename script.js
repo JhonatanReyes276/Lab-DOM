@@ -8,13 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
   let letrasVistas = 0;
 
   function voltear(card) {
-    card.classList.toggle("volteada");
+    const estaVolteada = card.classList.toggle("volteada");
 
-    if (!card.classList.contains("vista")) {
-      card.classList.add("vista");
-      letrasVistas++;
-      if (contador) contador.textContent = letrasVistas;
+    if (estaVolteada) {
+      if (!card.classList.contains("vista")) {
+        card.classList.add("vista");
+        letrasVistas++;
+      }
+    } else {
+      if (card.classList.contains("vista")) {
+        card.classList.remove("vista");
+        letrasVistas--;
+      }
     }
+
+    if (contador) contador.textContent = letrasVistas;
   }
 
   cards.forEach((card) => {
