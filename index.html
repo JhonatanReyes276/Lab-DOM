@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,104 +7,180 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <script src="script.js" defer></script>
-    <title></title>
+    <title>ABC · Galería de letras</title>
 </head>
 <body>
-    
-    <nav>
-        <div>
+
+    <nav class="navbar">
+        <p>Letras vistas: <span id="contador">0</span> / 27</p>
+        <div class="navbar__marca">
+            <i class="fa-solid fa-cubes"></i>
             <strong>ABC</strong>
         </div>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Letras</a></li>
-            <li><a href="#">Contacto</a></li>
+        <ul class="navbar__enlaces">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#letras">Letras</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
-    <br>
+    <main class="contenedor" id="inicio">
+        <header class="encabezado">
+            <h1>Galería de letras</h1>
+            <p>Pasa el cursor sobre una carta para voltearla.</p>
+        </header>
 
-    <!-- Contenedor Principal de las Cartas -->
-    <main>
-        <div>
-            <!-- Bloques individuales para cada carta -->
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            <div>D</div>
-            <div>E</div>
-            <div>F</div>
-            <div>G</div>
-            <div>H</div>
-            <div>I</div>
-            <div>J</div>
-            <div>K</div>
-            <div>L</div>
-            <div>M</div>
-            <div class="card" data-tipo="consonante">
-    <div class="card-frente">
-        <h2>M</h2>
-    </div>
-    <div class="card-dorso">
-        <img src="https://images.unsplash.com/photo-1732472581875-89ff83f18439?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Mango">
-        <p>Mango</p>
-    </div>
-</div>
-            <div>N</div>
-            <div class="card" data-tipo="consonante">
-    <div class="card-frente">
-        <h2>N</h2>
-    </div>
-    <div class="card-dorso">
-        <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Naranja">
-        <p>Naranja</p>
-    </div>
-</div>
-            <div>Ñ</div>
-            <div class="card" data-tipo="consonante">
-    <div class="card-frente">
-        <h2>Ñ</h2>
-    </div>
-    <div class="card-dorso">
-        <img src="https://images.unsplash.com/photo-1650542948439-7bc48a8533ab?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Ñandú">
-        <p>Ñandú</p>
-    </div>
-</div>
-            <div>O</div>
-            <div class="card" data-tipo="vocal">
-    <div class="card-frente">
-        <h2>O</h2>
-    </div>
-    <div class="card-dorso">
-        <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Oso">
-        <p>Oso</p>
-    </div>
-</div>
-            <div>P</div>
-            <div class="card" data-tipo="consonante">
-    <div class="card-frente">
-        <h2>P</h2>
-    </div>
-    <div class="card-dorso">
-        <img src="https://images.unsplash.com/photo-1621409443141-46c42dc0afb5?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Piña">
-        <p>Piña</p>
-    </div>
-</div>
-            <div>Q</div>
-            <div>R</div>
-            <div>S</div>
-            <div>T</div>
-            <div>U</div>
-            <div>V</div>
-            <div>W</div>
-            <div>X</div>
-            <div>Y</div>
-            <div>Z</div>
+        <div class="acciones">
+            <button class="btn btn-primario" type="button">
+                <i class="fa-solid fa-rotate"></i> Voltear todas
+            </button>
+            <button class="btn btn-secundario" type="button">
+                <i class="fa-solid fa-rotate-left"></i> Restablecer
+            </button>
         </div>
+
+        <!-- Contenedor Principal de las Cartas -->
+        <section class="galeria" id="letras">
+
+            <!-- BLOQUE A-F -->
+            <div class="bloque">
+                <div class="card"><div class="card-frente">A</div><div class="card-dorso"><span>Letra A</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">B</div><div class="card-dorso"><span>Letra B</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">C</div><div class="card-dorso"><span>Letra C</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">D</div><div class="card-dorso"><span>Letra D</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">E</div><div class="card-dorso"><span>Letra E</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">F</div><div class="card-dorso"><span>Letra F</span><small>Gira la carta</small></div></div>
+            </div>
+
+            <!-- BLOQUE G-L -->
+            <div class="bloque">
+                <div class="card"><div class="card-frente">G</div><div class="card-dorso"><span>Letra G</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">H</div><div class="card-dorso"><span>Letra H</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">I</div><div class="card-dorso"><span>Letra I</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">J</div><div class="card-dorso"><span>Letra J</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">K</div><div class="card-dorso"><span>Letra K</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">L</div><div class="card-dorso"><span>Letra L</span><small>Gira la carta</small></div></div>
+            </div>
+
+            <!-- BLOQUE M-P -->
+            <div class="bloque">
+                <div class="card"><div class="card-frente">M</div><div class="card-dorso"><span>Letra M</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">N</div><div class="card-dorso"><span>Letra N</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">Ñ</div><div class="card-dorso"><span>Letra Ñ</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">O</div><div class="card-dorso"><span>Letra O</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">P</div><div class="card-dorso"><span>Letra P</span><small>Gira la carta</small></div></div>
+            </div>
+
+            <!-- BLOQUE Q-U -->
+            <div class="bloque">
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>Q</h2></div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f4cda0ae3?q=80&w=600&auto=format&fit=crop" alt="Queso">
+                        <p>Queso</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>R</h2></div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1518877107743-e28fa9bdcb5d?q=80&w=600&auto=format&fit=crop" alt="Rosa">
+                        <p>Rosa</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>S</h2></div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600&auto=format&fit=crop" alt="Sol">
+                        <p>Sol</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>T</h2></div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1592790428967-4c7d3b8e8c10?q=80&w=600&auto=format&fit=crop" alt="Tomate">
+                        <p>Tomate</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="vocal">
+                    <div class="card-frente"><h2>U</h2></div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1620522837127-7015e536b7a0?q=80&w=600&auto=format&fit=crop" alt="Uva">
+                        <p>Uva</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE V-Z -->
+            <div class="bloque">
+                <div class="card"><div class="card-frente">V</div><div class="card-dorso"><span>Letra V</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">W</div><div class="card-dorso"><span>Letra W</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">X</div><div class="card-dorso"><span>Letra X</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">Y</div><div class="card-dorso"><span>Letra Y</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">Z</div><div class="card-dorso"><span>Letra Z</span><small>Gira la carta</small></div></div>
+            </div>
+
+        </section>
+
+        <section class="equipo" id="equipo">
+            <h2>Nuestro equipo</h2>
+            <div class="equipo__lista">
+                <article class="miembro">
+                    <div class="miembro__avatar">FO</div>
+                    <h3>Felipe Ortiz</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">JR</div>
+                    <h3>Jhonatan Reyes</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">JP</div>
+                    <h3>Jimmy Peralta</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">DM</div>
+                    <h3>David Marca</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">MI</div>
+                    <h3>Mauro Infante</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2>Contacto</h2>
+            <form class="formulario">
+                <label class="campo">
+                    <span>Nombre</span>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                </label>
+                <label class="campo">
+                    <span>Correo</span>
+                    <input type="email" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                </label>
+                <label class="campo">
+                    <span>Mensaje</span>
+                    <textarea name="mensaje" rows="4" placeholder="Escribe aquí..."></textarea>
+                </label>
+                <button class="btn btn-primario" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
     </main>
 
-<footer>nec
-
-</footer>
+    <footer class="pie">
+        <p>Laboratorio de DOM · ABC</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
