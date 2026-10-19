@@ -254,8 +254,30 @@ h1, h2, h3 {
     background: linear-gradient(160deg, var(--primario) 0%, var(--primario-oscuro) 100%);
     color: #fff;
     transform: rotateY(180deg);
+<<<<<<< HEAD
     padding: 1rem;
     gap: .5rem;
+=======
+}
+.card-dorso {
+    padding: .6rem;
+    overflow: hidden;
+}
+
+.card-dorso img {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-dorso p {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+>>>>>>> felipe
 }
 
 .card-dorso span {
@@ -269,6 +291,7 @@ h1, h2, h3 {
     opacity: .8;
 }
 
+<<<<<<< HEAD
 .card-dorso img {
     width: 100%;
     height: auto;
@@ -280,12 +303,27 @@ h1, h2, h3 {
     background: rgba(255, 255, 255, .12);
 }
 
+=======
+>>>>>>> felipe
 .card:hover .card-frente,
 .card:hover .card-dorso {
     box-shadow: var(--sombra-fuerte);
 }
 
+<<<<<<< HEAD
 /* Estado volteada (clase .volteada, se aplica desde JS al hacer clic) */
+=======
+/* Volteado por hover (sin JS) */
+.card:hover .card-frente {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-dorso {
+    transform: rotateY(0deg);
+}
+
+/* Estado volteada (clase .volteada) */
+>>>>>>> felipe
 .card.volteada .card-frente {
     transform: rotateY(180deg);
 }
