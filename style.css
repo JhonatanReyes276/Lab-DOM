@@ -248,6 +248,7 @@ h1, h2, h3 {
     font-weight: 700;
     color: var(--primario);
     transform: rotateY(0deg);
+    text-transform: uppercase;
 }
 
 .card-dorso {
@@ -256,6 +257,7 @@ h1, h2, h3 {
     transform: rotateY(180deg);
     padding: 1rem;
     gap: .5rem;
+    text-transform: uppercase;
 }
 
 .card-dorso span {
@@ -420,6 +422,11 @@ h1, h2, h3 {
     :root {
         --por-fila: 4;
     }
+}
+
+/* Filtro de contenido */
+.oculta {
+    display: none !important;
 }
 
 @media (max-width: 640px) {

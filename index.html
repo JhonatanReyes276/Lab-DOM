@@ -6,17 +6,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <script src="script.js" defer></script>
     <title>ABC · Galería de letras</title>
 </head>
 <body>
 
     <nav class="navbar">
-        <p>Letras vistas: <span id="contador">0</span> / 27</p>
         <div class="navbar__marca">
             <i class="fa-solid fa-cubes"></i>
-            <strong>ABC</strong>
+            <h1>ABC</h1>
         </div>
+        <p class="navbar__contador">Letras vistas: <span id="contador">0</span> / 27</p>
         <ul class="navbar__enlaces">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#letras">Letras</a></li>
@@ -27,17 +26,13 @@
 
     <main class="contenedor" id="inicio">
         <header class="encabezado">
-            <h1>Galería de letras</h1>
-            <p>Pasa el cursor sobre una carta para voltearla.</p>
+            <h2>Galería de letras</h2>
+            <p>Haz clic en una carta para voltearla y ver su imagen y palabra.</p>
         </header>
 
-        <div class="acciones">
-            <button class="btn btn-primario" type="button">
-                <i class="fa-solid fa-rotate"></i> Voltear todas
-            </button>
-            <button class="btn btn-secundario" type="button">
-                <i class="fa-solid fa-rotate-left"></i> Restablecer
-            </button>
+        <div class="botones">
+            <button type="button" data-filtro="vocal">Vocales</button>
+            <button type="button" data-filtro="todas">Todas</button>
         </div>
 
         <!-- Contenedor Principal de las Cartas -->
@@ -45,31 +40,82 @@
 
             <!-- BLOQUE A-F -->
             <div class="bloque">
-                <div class="card"><div class="card-frente">A</div><div class="card-dorso"><span>Letra A</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">B</div><div class="card-dorso"><span>Letra B</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">C</div><div class="card-dorso"><span>Letra C</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">D</div><div class="card-dorso"><span>Letra D</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">E</div><div class="card-dorso"><span>Letra E</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">F</div><div class="card-dorso"><span>Letra F</span><small>Gira la carta</small></div></div>
+                <div class="card" data-tipo="vocal">
+                    <div class="card-frente"><h2>A</h2></div>
+                    <div class="card-dorso"><span>Letra A</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>B</h2></div>
+                    <div class="card-dorso"><span>Letra B</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>C</h2></div>
+                    <div class="card-dorso"><span>Letra C</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>D</h2></div>
+                    <div class="card-dorso"><span>Letra D</span></div>
+                </div>
+                <div class="card" data-tipo="vocal">
+                    <div class="card-frente"><h2>E</h2></div>
+                    <div class="card-dorso"><span>Letra E</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>F</h2></div>
+                    <div class="card-dorso"><span>Letra F</span></div>
+                </div>
             </div>
 
             <!-- BLOQUE G-L -->
             <div class="bloque">
-                <div class="card"><div class="card-frente">G</div><div class="card-dorso"><span>Letra G</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">H</div><div class="card-dorso"><span>Letra H</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">I</div><div class="card-dorso"><span>Letra I</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">J</div><div class="card-dorso"><span>Letra J</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">K</div><div class="card-dorso"><span>Letra K</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">L</div><div class="card-dorso"><span>Letra L</span><small>Gira la carta</small></div></div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>G</h2></div>
+                    <div class="card-dorso"><span>Letra G</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>H</h2></div>
+                    <div class="card-dorso"><span>Letra H</span></div>
+                </div>
+                <div class="card" data-tipo="vocal">
+                    <div class="card-frente"><h2>I</h2></div>
+                    <div class="card-dorso"><span>Letra I</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>J</h2></div>
+                    <div class="card-dorso"><span>Letra J</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>K</h2></div>
+                    <div class="card-dorso"><span>Letra K</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>L</h2></div>
+                    <div class="card-dorso"><span>Letra L</span></div>
+                </div>
             </div>
 
             <!-- BLOQUE M-P -->
             <div class="bloque">
-                <div class="card"><div class="card-frente">M</div><div class="card-dorso"><span>Letra M</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">N</div><div class="card-dorso"><span>Letra N</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">Ñ</div><div class="card-dorso"><span>Letra Ñ</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">O</div><div class="card-dorso"><span>Letra O</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">P</div><div class="card-dorso"><span>Letra P</span><small>Gira la carta</small></div></div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>M</h2></div>
+                    <div class="card-dorso"><span>Letra M</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>N</h2></div>
+                    <div class="card-dorso"><span>Letra N</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>Ñ</h2></div>
+                    <div class="card-dorso"><span>Letra Ñ</span></div>
+                </div>
+                <div class="card" data-tipo="vocal">
+                    <div class="card-frente"><h2>O</h2></div>
+                    <div class="card-dorso"><span>Letra O</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>P</h2></div>
+                    <div class="card-dorso"><span>Letra P</span></div>
+                </div>
             </div>
 
             <!-- BLOQUE Q-U -->
@@ -113,11 +159,26 @@
 
             <!-- BLOQUE V-Z -->
             <div class="bloque">
-                <div class="card"><div class="card-frente">V</div><div class="card-dorso"><span>Letra V</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">W</div><div class="card-dorso"><span>Letra W</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">X</div><div class="card-dorso"><span>Letra X</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">Y</div><div class="card-dorso"><span>Letra Y</span><small>Gira la carta</small></div></div>
-                <div class="card"><div class="card-frente">Z</div><div class="card-dorso"><span>Letra Z</span><small>Gira la carta</small></div></div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>V</h2></div>
+                    <div class="card-dorso"><span>Letra V</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>W</h2></div>
+                    <div class="card-dorso"><span>Letra W</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>X</h2></div>
+                    <div class="card-dorso"><span>Letra X</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>Y</h2></div>
+                    <div class="card-dorso"><span>Letra Y</span></div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente"><h2>Z</h2></div>
+                    <div class="card-dorso"><span>Letra Z</span></div>
+                </div>
             </div>
 
         </section>
@@ -181,6 +242,7 @@
     <footer class="pie">
         <p>Laboratorio de DOM · ABC</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
