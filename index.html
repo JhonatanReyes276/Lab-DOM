@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-es">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,44 +7,126 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <script src="script.js" defer></script>
-    <title></title>
+    <title>ABC · Galería de letras</title>
 </head>
 
 <body>
 
-    <body>
+    <nav class="navbar">
+        <p>Letras vistas: <span id="contador">0</span> / 27</p>
+        <div class="navbar__marca">
+            <i class="fa-solid fa-cubes"></i>
+            <strong>ABC</strong>
+        </div>
+        <ul class="navbar__enlaces">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#letras">Letras</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
+    <main class="contenedor" id="inicio">
+        <header class="encabezado">
+            <h1>Galería de letras</h1>
+            <p>Pasa el cursor sobre una carta para voltearla.</p>
+        </header>
 
-        <nav>
-            <div>
-                <strong>ABC</strong>
-            </div>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Letras</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-
-        <br>
+        <div class="acciones">
+            <button class="btn btn-primario" type="button" id="btn-voltear-todas">
+                <i class="fa-solid fa-rotate"></i> Voltear todas
+            </button>
+            <button class="btn btn-secundario" type="button" id="btn-restablecer">
+                <i class="fa-solid fa-rotate-left"></i> Restablecer
+            </button>
+            <button class="btn btn-filtro btn-activo" data-filtro="todas" type="button">
+                <i class="fa-solid fa-layer-group"></i> Todas
+            </button>
+            <button class="btn btn-filtro" data-filtro="vocal" type="button">
+                <i class="fa-solid fa-circle"></i> Vocales
+            </button>
+            <button class="btn btn-filtro" data-filtro="consonante" type="button">
+                <i class="fa-solid fa-leaf"></i> Consonantes
+            </button>
+        </div>
 
         <!-- Contenedor Principal de las Cartas -->
-        <main>
-            <div>
-                <!-- Bloques individuales para cada carta -->
-                <div>A</div>
-                <div>B</div>
-                <div>C</div>
-                <div>D</div>
-                <div>E</div>
-                <div>F</div>
+        <section class="galeria" id="letras">
+
+            <!-- BLOQUE A-F (imágenes de los compañeros) -->
+            <div class="bloque">
+                <div class="card" data-tipo="vocal">
+                    <div class="card-frente">
+                        <h2>A</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2wx6PbQgAiiY6ENDmHfXRAK384l43bBAiTmOj_sXGVQ&s=10"
+                            alt="Avión">
+                        <p>Avión</p>
+
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>B</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPh1OY8PLkHYESN4t1PiEVnkmgRxQIwJFVdJkI9lEjww&s=10"
+                            alt="Burro">
+                        <p>Burro</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>C</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZC0esqP68jCXQVZNv2X9439KiMRd3bwgftDMJ7WEz3Q&s=10"
+                            alt="Camello">
+                        <p>Camello</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>D</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlfamiYaAZrtcV2ip3TT8cRu89s6J5DyxMR4pNBktsLw&s=10"
+                            alt="Dinosaurio">
+                        <p>Dinosaurio</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="vocal">
+                    <div class="card-frente">
+                        <h2>E</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRsxknzdovMb0uGnRzZymmfI1DSCI6O8tpLSkQCZbWPQ&s=10"
+                            alt="Erizo">
+                        <p>Erizo</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>F</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE3RakJCGvzMUO_CtoBd5ZrbDw_ZQszyX4iQ1xV6NI2g&s=10"
+                            alt="Foca">
+                        <p>Foca</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE G-L (imágenes de los compañeros) -->
+            <div class="bloque">
                 <div class="card" data-tipo="consonante">
                     <div class="card-frente">
                         <h2>G</h2>
                     </div>
                     <div class="card-dorso">
-                        <img src="https://images.unsplash.com/photo-1569262573201-d9c7ab207647?q=80&w=1121&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Gaviota">
+                        <img src="https://images.unsplash.com/photo-1569262573201-d9c7ab207647?q=80&w=1121&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="Gaviota">
                         <p>Gaviota</p>
                     </div>
                 </div>
@@ -53,7 +135,8 @@
                         <h2>H</h2>
                     </div>
                     <div class="card-dorso">
-                        <img src="https://images.unsplash.com/photo-1607690424560-35d967d6ad7c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Huevo">
+                        <img src="https://images.unsplash.com/photo-1607690424560-35d967d6ad7c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="Huevo">
                         <p>Huevo</p>
                     </div>
                 </div>
@@ -62,7 +145,8 @@
                         <h2>I</h2>
                     </div>
                     <div class="card-dorso">
-                        <img src="https://images.unsplash.com/photo-1622636867718-6b2cd12132a6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Imán">
+                        <img src="https://images.unsplash.com/photo-1622636867718-6b2cd12132a6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="Imán">
                         <p>Imán</p>
                     </div>
                 </div>
@@ -71,7 +155,8 @@
                         <h2>J</h2>
                     </div>
                     <div class="card-dorso">
-                        <img src="https://images.unsplash.com/photo-1604336755604-96ee6fa9f3f1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Jirafa">
+                        <img src="https://images.unsplash.com/photo-1604336755604-96ee6fa9f3f1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="Jirafa">
                         <p>Jirafa</p>
                     </div>
                 </div>
@@ -80,7 +165,8 @@
                         <h2>K</h2>
                     </div>
                     <div class="card-dorso">
-                        <img src="https://images.unsplash.com/photo-1585059895524-72359e06133a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Kiwi">
+                        <img src="https://images.unsplash.com/photo-1585059895524-72359e06133a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="Kiwi">
                         <p>Kiwi</p>
                     </div>
                 </div>
@@ -89,29 +175,236 @@
                         <h2>L</h2>
                     </div>
                     <div class="card-dorso">
-                        <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Lámpara">
+                        <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="Lámpara">
                         <p>Lámpara</p>
                     </div>
                 </div>
-                <div>M</div>
-                <div>N</div>
-                <div>Ñ</div>
-                <div>O</div>
-                <div>P</div>
-                <div>Q</div>
-                <div>R</div>
-                <div>S</div>
-                <div>T</div>
-                <div>U</div>
-                <div>V</div>
-                <div>W</div>
-                <div>X</div>
-                <div>Y</div>
-                <div>Z</div>
             </div>
-        </main>
 
+            <!-- BLOQUE M-P (imágenes didácticas para niños) -->
+            <div class="bloque">
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>M</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=600&auto=format&fit=crop"
+                            alt="Mono">
+                        <p>Mono</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>N</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1533234252349-fc42e77efb3e?q=80&w=600&auto=format&fit=crop"
+                            alt="Naranja">
+                        <p>Naranja</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>Ñ</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1529165637-82785b5855cc?q=80&w=600&auto=format&fit=crop"
+                            alt="Ñu">
+                        <p>Ñu</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="vocal">
+                    <div class="card-frente">
+                        <h2>O</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1525085718167-30023b431274?q=80&w=600&auto=format&fit=crop"
+                            alt="Oso">
+                        <p>Oso</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>P</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600&auto=format&fit=crop"
+                            alt="Perro">
+                        <p>Perro</p>
+                    </div>
+                </div>
+            </div>
 
-    </body>
+            <!-- BLOQUE Q-U (imágenes didácticas para niños) -->
+            <div class="bloque">
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>Q</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f4cda0ae3?q=80&w=600&auto=format&fit=crop"
+                            alt="Queso">
+                        <p>Queso</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>R</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1518877107743-e28fa9bdcb5d?q=80&w=600&auto=format&fit=crop"
+                            alt="Rosa">
+                        <p>Rosa</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>S</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600&auto=format&fit=crop"
+                            alt="Sol">
+                        <p>Sol</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>T</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1592790428967-4c7d3b8e8c10?q=80&w=600&auto=format&fit=crop"
+                            alt="Tomate">
+                        <p>Tomate</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="vocal">
+                    <div class="card-frente">
+                        <h2>U</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1620522837127-7015e536b7a0?q=80&w=600&auto=format&fit=crop"
+                            alt="Uva">
+                        <p>Uva</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE V-Z (imágenes didácticas para niños) -->
+            <div class="bloque">
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>V</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=600&auto=format&fit=crop"
+                            alt="Violin">
+                        <p>Violeta</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>W</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1526369201781-7a126d4b3f6d?q=80&w=600&auto=format&fit=crop"
+                            alt="Web">
+                        <p>Web</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>X</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1533518213130-2a73f9d6e5e8?q=80&w=600&auto=format&fit=crop"
+                            alt="Xilofono">
+                        <p>Xilófono</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>Y</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f21b0034e38?q=80&w=600&auto=format&fit=crop"
+                            alt="Yoga">
+                        <p>Yoga</p>
+                    </div>
+                </div>
+                <div class="card" data-tipo="consonante">
+                    <div class="card-frente">
+                        <h2>Z</h2>
+                    </div>
+                    <div class="card-dorso">
+                        <img src="https://images.unsplash.com/photo-1529446819101-4f7a232f9d9d?q=80&w=600&auto=format&fit=crop"
+                            alt="Zafiro">
+                        <p>Zafiro</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="equipo" id="equipo">
+            <h2>Nuestro equipo</h2>
+            <div class="equipo__lista">
+                <article class="miembro">
+                    <div class="miembro__avatar">FO</div>
+                    <h3>Felipe Ortiz</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">JR</div>
+                    <h3>Jhonatan Reyes</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">JP</div>
+                    <h3>Jimmy Peralta</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">DM</div>
+                    <h3>David Marca</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">MI</div>
+                    <h3>Mauro Infante</h3>
+                    <p>Miembro del equipo</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2>Contacto</h2>
+            <form class="formulario">
+                <label class="campo">
+                    <span>Nombre</span>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                </label>
+                <label class="campo">
+                    <span>Correo</span>
+                    <input type="email" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                </label>
+                <label class="campo">
+                    <span>Mensaje</span>
+                    <textarea name="mensaje" rows="4" placeholder="Escribe aquí..."></textarea>
+                </label>
+                <button class="btn btn-primario" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>Laboratorio de DOM · ABC</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 
 </html>
