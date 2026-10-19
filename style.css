@@ -6,16 +6,16 @@
 }
 
 :root {
-    --fondo: #fdf2e9;
-    --superficie: #fffef8;
+    --fondo: #a8e6cf;
+    --superficie: #b2dfdb;
     --primario: #ffb7b2;
     --primario-oscuro: #ffa07a;
     --secundario: #a8e6cf;
-    --texto: #5d4037;
-    --texto-suave: #8d6e63;
-    --borde: #ffe5d9;
-    --sombra: 0 8px 24px rgba(62, 39, 35, 0.10);
-    --sombra-fuerte: 0 14px 30px rgba(62, 39, 35, 0.14);
+    --texto: #2e7d32;
+    --texto-suave: #43a047;
+    --borde: #80cbc4;
+    --sombra: 0 8px 24px rgba(46, 125, 50, 0.10);
+    --sombra-fuerte: 0 14px 30px rgba(46, 125, 50, 0.14);
     --radio: 22px;
     --gap: 2rem;
     --por-fila: 5;
@@ -395,12 +395,28 @@ body {
 
 /* Footer */
 .pie {
-    background: var(--superficie);
+    background: var(--secundario);
     text-align: center;
-    padding: 1rem;
+    padding: 3rem 1rem 2rem;
     border-top: 4px solid var(--primario);
-    color: var(--texto-suave);
+    color: var(--texto);
     font-size: 0.9rem;
+}
+
+.pie__empresa {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.pie__empresa h2 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    color: var(--texto);
+}
+
+.pie__empresa p {
+    margin: 0.25rem 0;
+    color: var(--texto-suave);
 }
 
 /* Responsive */
