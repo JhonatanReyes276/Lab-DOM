@@ -1,0 +1,435 @@
+/* ========== Reset / base ========== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --fondo: #f4f6fb;
+    --superficie: #ffffff;
+    --primario: #2f6df6;
+    --primario-oscuro: #1b4fd0;
+    --texto: #1f2937;
+    --texto-suave: #5b6472;
+    --borde: #e2e8f0;
+    --sombra: 0 6px 18px rgba(15, 23, 42, 0.10);
+    --sombra-fuerte: 0 14px 30px rgba(15, 23, 42, 0.18);
+    --radio: 14px;
+    --gap: 1.25rem;
+    --por-fila: 6;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0 0 .4rem;
+    line-height: 1.2;
+}
+
+.contenedor {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .85rem clamp(1rem, 4vw, 2.5rem);
+    background: #16213e;
+    color: #fff;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, .25);
+}
+
+.navbar__marca {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    font-size: 1.3rem;
+    letter-spacing: .12em;
+}
+
+.navbar__marca i {
+    color: #7ea6ff;
+    font-size: 1.15rem;
+}
+
+.navbar__enlaces {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar__enlaces a {
+    display: inline-block;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    color: #cfd8ee;
+    text-decoration: none;
+    font-size: .95rem;
+    transition: background-color .25s ease, color .25s ease;
+}
+
+.navbar__enlaces a:hover,
+.navbar__enlaces a:focus-visible {
+    background: rgba(255, 255, 255, .12);
+    color: #fff;
+}
+
+/* ========== Encabezado ========== */
+.encabezado {
+    margin: 1rem 0 1.5rem;
+    text-align: center;
+}
+
+.encabezado h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.encabezado p {
+    margin: 0;
+    color: var(--texto-suave);
+}
+
+.encabezado code {
+    padding: .1rem .35rem;
+    border-radius: 6px;
+    background: #e7edfb;
+    color: var(--primario-oscuro);
+    font-size: .9em;
+}
+
+/* ========== Botones ========== */
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+    margin-bottom: 1.75rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .65rem 1.3rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font: inherit;
+    font-size: .95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .25s ease, background-color .25s ease, color .25s ease;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-primario {
+    background: var(--primario);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(47, 109, 246, .35);
+}
+
+.btn-primario:hover {
+    background: var(--primario-oscuro);
+    box-shadow: 0 10px 22px rgba(47, 109, 246, .45);
+}
+
+.btn-secundario {
+    background: var(--superficie);
+    border-color: var(--borde);
+    color: var(--texto);
+}
+
+.btn-secundario:hover {
+    border-color: #c3cddd;
+    background: #eef2f9;
+}
+
+.btn-fantasma {
+    background: transparent;
+    border-color: var(--primario);
+    color: var(--primario);
+    padding: .45rem 1rem;
+    font-size: .9rem;
+}
+
+.btn-fantasma:hover {
+    background: var(--primario);
+    color: #fff;
+}
+
+.btn:focus-visible {
+    outline: 3px solid rgba(47, 109, 246, .45);
+    outline-offset: 2px;
+}
+
+/* ========== Galería en filas ========== */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: center;
+    padding: 1.5rem;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+/* Cada bloque es una fila de cartas */
+.bloque {
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: center;
+}
+
+/* ========== Card con efecto flip ========== */
+.card {
+    position: relative;
+    perspective: 1000px;
+    flex: 0 0 calc((100% - (var(--por-fila) - 1) * var(--gap)) / var(--por-fila));
+    aspect-ratio: 3 / 4;
+    cursor: pointer;
+    border-radius: var(--radio);
+    outline: none;
+}
+
+.card:focus-visible {
+    box-shadow: 0 0 0 3px rgba(47, 109, 246, .55);
+}
+
+.card-frente,
+.card-dorso {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+    border: 2px solid var(--borde);
+    border-radius: var(--radio);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform .6s ease, box-shadow .3s ease, background-color .3s ease;
+    box-shadow: var(--sombra);
+}
+
+.card-frente {
+    background: linear-gradient(160deg, #ffffff 0%, #eef3ff 100%);
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 700;
+    color: var(--primario);
+    transform: rotateY(0deg);
+}
+
+.card-dorso {
+    background: linear-gradient(160deg, var(--primario) 0%, var(--primario-oscuro) 100%);
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card-dorso span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+
+.card-dorso small {
+    font-size: .75rem;
+    opacity: .8;
+}
+
+.card:hover .card-frente,
+.card:hover .card-dorso {
+    box-shadow: var(--sombra-fuerte);
+}
+
+/* Volteado por hover (sin JS) */
+.card:hover .card-frente {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-dorso {
+    transform: rotateY(0deg);
+}
+
+/* Estado volteada (clase .volteada) */
+.card.volteada .card-frente {
+    transform: rotateY(180deg);
+}
+
+.card.volteada .card-dorso {
+    transform: rotateY(0deg);
+}
+
+/* ========== Sección del equipo ========== */
+.equipo {
+    margin-top: 2.5rem;
+}
+
+.equipo h2,
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.equipo__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+.miembro {
+    width: 240px;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.miembro:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.miembro__avatar {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(160deg, var(--primario), #7ea6ff);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.miembro h3 {
+    font-size: 1.05rem;
+}
+
+.miembro p {
+    margin: 0 0 1rem;
+    color: var(--texto-suave);
+    font-size: .9rem;
+}
+
+/* ========== Contacto ========== */
+.contacto {
+    margin-top: 2.5rem;
+}
+
+.formulario {
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+.campo span {
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--texto-suave);
+}
+
+.campo input,
+.campo textarea {
+    font: inherit;
+    padding: .6rem .8rem;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background: #fbfcfe;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--primario);
+    box-shadow: 0 0 0 3px rgba(47, 109, 246, .18);
+}
+
+.formulario .btn {
+    align-self: flex-start;
+}
+
+/* ========== Pie ========== */
+.pie {
+    padding: 1.5rem;
+    text-align: center;
+    background: #16213e;
+    color: #aab6d0;
+}
+
+.pie p {
+    margin: 0;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 900px) {
+    :root {
+        --por-fila: 4;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --por-fila: 3;
+        --gap: .9rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .galeria {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    :root {
+        --por-fila: 2;
+    }
+}
