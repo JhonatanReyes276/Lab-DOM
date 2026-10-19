@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,59 +7,137 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <script src="script.js" defer></script>
-    <title></title>
+    <title>ABC · Galería de letras</title>
 </head>
 <body>
-    
-    <nav>
-        <div>
+
+    <nav class="navbar">
+        <div class="navbar__marca">
+            <i class="fa-solid fa-cubes"></i>
             <strong>ABC</strong>
         </div>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Letras</a></li>
-            <li><a href="#">Contacto</a></li>
+        <ul class="navbar__enlaces">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#letras">Letras</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
-    <br>
+    <main class="contenedor" id="inicio">
+        <header class="encabezado">
+            <h1>Galería de letras</h1>
+            <p>Pasa el cursor sobre una carta para voltearla.</p>
+        </header>
 
-    <!-- Contenedor Principal de las Cartas -->
-    <main>
-        <div>
-            <!-- Bloques individuales para cada carta -->
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            <div>D</div>
-            <div>E</div>
-            <div>F</div>
-            <div>G</div>
-            <div>H</div>
-            <div>I</div>
-            <div>J</div>
-            <div>K</div>
-            <div>L</div>
-            <div>M</div>
-            <div>N</div>
-            <div>Ñ</div>
-            <div>O</div>
-            <div>P</div>
-            <div>Q</div>
-            <div>R</div>
-            <div>S</div>
-            <div>T</div>
-            <div>U</div>
-            <div>V</div>
-            <div>W</div>
-            <div>X</div>
-            <div>Y</div>
-            <div>Z</div>
+        <div class="acciones">
+            <button class="btn btn-primario" type="button">
+                <i class="fa-solid fa-rotate"></i> Voltear todas
+            </button>
+            <button class="btn btn-secundario" type="button">
+                <i class="fa-solid fa-rotate-left"></i> Restablecer
+            </button>
         </div>
+
+        <!-- Contenedor Principal de las Cartas -->
+        <section class="galeria" id="letras">
+
+            <!-- BLOQUE A-F -->
+            <div class="bloque">
+                <div class="card"><div class="card-frente">A</div><div class="card-dorso"><span>Letra A</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">B</div><div class="card-dorso"><span>Letra B</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">C</div><div class="card-dorso"><span>Letra C</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">D</div><div class="card-dorso"><span>Letra D</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">E</div><div class="card-dorso"><span>Letra E</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">F</div><div class="card-dorso"><span>Letra F</span><small>Gira la carta</small></div></div>
+            </div>
+
+            <!-- BLOQUE G-L -->
+            <div class="bloque">
+                <div class="card"><div class="card-frente">G</div><div class="card-dorso"><span>Letra G</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">H</div><div class="card-dorso"><span>Letra H</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">I</div><div class="card-dorso"><span>Letra I</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">J</div><div class="card-dorso"><span>Letra J</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">K</div><div class="card-dorso"><span>Letra K</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">L</div><div class="card-dorso"><span>Letra L</span><small>Gira la carta</small></div></div>
+            </div>
+
+            <!-- BLOQUE M-P -->
+            <div class="bloque">
+                <div class="card"><div class="card-frente">M</div><div class="card-dorso"><span>Letra M</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">N</div><div class="card-dorso"><span>Letra N</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">Ñ</div><div class="card-dorso"><span>Letra Ñ</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">O</div><div class="card-dorso"><span>Letra O</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">P</div><div class="card-dorso"><span>Letra P</span><small>Gira la carta</small></div></div>
+            </div>
+
+            <!-- BLOQUE Q-U -->
+            <div class="bloque">
+                <div class="card"><div class="card-frente">Q</div><div class="card-dorso"><span>Letra Q</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">R</div><div class="card-dorso"><span>Letra R</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">S</div><div class="card-dorso"><span>Letra S</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">T</div><div class="card-dorso"><span>Letra T</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">U</div><div class="card-dorso"><span>Letra U</span><small>Gira la carta</small></div></div>
+            </div>
+
+            <!-- BLOQUE V-Z -->
+            <div class="bloque">
+                <div class="card"><div class="card-frente">V</div><div class="card-dorso"><span>Letra V</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">W</div><div class="card-dorso"><span>Letra W</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">X</div><div class="card-dorso"><span>Letra X</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">Y</div><div class="card-dorso"><span>Letra Y</span><small>Gira la carta</small></div></div>
+                <div class="card"><div class="card-frente">Z</div><div class="card-dorso"><span>Letra Z</span><small>Gira la carta</small></div></div>
+            </div>
+
+        </section>
+
+        <section class="equipo" id="equipo">
+            <h2>Nuestro equipo</h2>
+            <div class="equipo__lista">
+                <article class="miembro">
+                    <div class="miembro__avatar">LM</div>
+                    <h3>Lucía Martínez</h3>
+                    <p>Diseño e interfaz</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">DR</div>
+                    <h3>Diego Ramírez</h3>
+                    <p>Desarrollo front-end</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+                <article class="miembro">
+                    <div class="miembro__avatar">AS</div>
+                    <h3>Ana Soler</h3>
+                    <p>Accesibilidad y UX</p>
+                    <button class="btn btn-fantasma" type="button">Ver perfil</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2>Contacto</h2>
+            <form class="formulario">
+                <label class="campo">
+                    <span>Nombre</span>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                </label>
+                <label class="campo">
+                    <span>Correo</span>
+                    <input type="email" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                </label>
+                <label class="campo">
+                    <span>Mensaje</span>
+                    <textarea name="mensaje" rows="4" placeholder="Escribe aquí..."></textarea>
+                </label>
+                <button class="btn btn-primario" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
     </main>
 
-<footer>nec
+    <footer class="pie">
+        <p>Laboratorio de DOM · ABC</p>
+    </footer>
 
-</footer>
 </body>
 </html>

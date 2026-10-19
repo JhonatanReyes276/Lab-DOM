@@ -20,6 +20,10 @@
     --por-fila: 6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: var(--fondo);
@@ -69,7 +73,9 @@ h1, h2, h3 {
 
 .navbar__enlaces {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: .35rem;
     margin: 0;
     padding: 0;
