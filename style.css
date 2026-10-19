@@ -6,21 +6,21 @@
 }
 
 :root {
-    --fondo: #fdf2e9;
-    --superficie: #fffef8;
-    --primario: #ffb7b2;
-    --primario-oscuro: #ffa07a;
-    --secundario: #a8e6cf;
-    --texto: #5d4037;
-    --texto-suave: #8d6e63;
-    --borde: #ffe5d9;
-    --sombra: 0 8px 24px rgba(62, 39, 35, 0.10);
-    --sombra-fuerte: 0 14px 30px rgba(62, 39, 35, 0.14);
+    --fondo: #e8f5e9;
+    --superficie: #f1f8e9;
+    --primario: #81c784;
+    --primario-oscuro: #66bb6a;
+    --secundario: #a5d6a7;
+    --texto: #1b5e20;
+    --texto-suave: #4caf50;
+    --borde: #c8e6c9;
+    --sombra: 0 8px 24px rgba(27, 94, 32, 0.10);
+    --sombra-fuerte: 0 14px 30px rgba(27, 94, 32, 0.14);
     --radio: 22px;
     --gap: 2rem;
     --por-fila: 5;
-    --vocal: #ffadad;
-    --consonante: #b5eada;
+    --vocal: #a5d6a7;
+    --consonante: #c8e6c9;
 }
 
 html {
@@ -148,7 +148,7 @@ body {
 .btn-primario {
     background: var(--primario);
     color: #fff;
-    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.35);
+    box-shadow: 0 4px 12px rgba(129, 199, 132, 0.35);
 }
 
 .btn-primario:hover {
@@ -183,7 +183,7 @@ body {
     background: var(--primario);
     color: #fff;
     border-color: var(--primario);
-    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.35);
+    box-shadow: 0 4px 12px rgba(129, 199, 132, 0.35);
 }
 
 /* Galería */
