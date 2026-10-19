@@ -272,16 +272,7 @@ h1, h2, h3 {
     box-shadow: var(--sombra-fuerte);
 }
 
-/* Volteado por hover (sin JS) */
-.card:hover .card-frente {
-    transform: rotateY(180deg);
-}
-
-.card:hover .card-dorso {
-    transform: rotateY(0deg);
-}
-
-/* Estado volteada (clase .volteada) */
+/* Estado volteada (clase .volteada, se aplica desde JS al hacer clic) */
 .card.volteada .card-frente {
     transform: rotateY(180deg);
 }
