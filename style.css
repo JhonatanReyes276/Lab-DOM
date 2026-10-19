@@ -20,6 +20,10 @@
     --por-fila: 6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: var(--fondo);
@@ -69,7 +73,9 @@ h1, h2, h3 {
 
 .navbar__enlaces {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: .35rem;
     margin: 0;
     padding: 0;
@@ -248,6 +254,25 @@ h1, h2, h3 {
     background: linear-gradient(160deg, var(--primario) 0%, var(--primario-oscuro) 100%);
     color: #fff;
     transform: rotateY(180deg);
+}
+.card-dorso {
+    padding: .6rem;
+    overflow: hidden;
+}
+
+.card-dorso img {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-dorso p {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: .04em;
 }
 
 .card-dorso span {
